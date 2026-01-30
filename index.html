@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering">
+  <meta property="og:title" content="WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering"/>
+  <meta property="og:description" content="A scalable data synthesis pipeline for computer-use agents with step-level filtering for efficient, high-quality CUA training without human annotations."/>
+  <meta property="og:url" content="https://github.com/yifei-he/WebSTAR"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/mergebench_banner.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering">
+  <meta name="twitter:description" content="A scalable data synthesis pipeline for computer-use agents with step-level filtering for efficient, high-quality CUA training without human annotations.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/mergebench_banner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Computer Use Agent, CUA, Data Synthesis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering</title>
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-10 has-text-centered">
+            <h1 class="title is-1 publication-title">WebSTAR: Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Yifei He*<sup>1</sup>, Pranit Chawla*<sup>2</sup>, Yaser Souri<sup>2</sup>, Subhojit Som<sup>2</sup>, Xia Song<sup>2</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <sup>1</sup>
+                <img src="figs/uiuc.png" alt="UIUC logo" style="height: 1em; vertical-align: text-bottom; margin: 0 0.1em;" />
+                UIUC
+              </span>
+              <span class="author-block" style="margin-left: 1em;">
+                <sup>2</sup>
+                <img src="figs/msft.png" alt="Microsoft logo" style="height: 1em; vertical-align: text-bottom; margin: 0 0.1em;" />
+                Microsoft
+              </span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2512.10962" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/yifei-he/WebSTAR" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a href="https://huggingface.co/datasets/microsoft/WebSTAR" target="_blank"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fas fa-robot"></i>
+              </span>
+              <span>Data</span>
+            </a>
+          </span>
+
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Video demo -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <h2 class="title is-3 has-text-centered">The WebSTAR Dataset</h2>
+        <p class="content">
+          WebSTAR (WebVoyager Step-Level Trajectories with Augmented Reasoning) is a large-scale dataset for training and evaluating computer use agents with step-level quality scores. It contains <strong>13.3K trajectories with 100K total steps</strong> synthesized from OpenAI's Operator model. Unlike traditional trajectory-level filtering approaches, WebSTAR provides <strong>fine-grained scores and detailed reasoning for each action</strong> in an agent's trajectory, enabling more precise quality assessment and selective training on high-quality steps.
+        </p>
+      </div>
+    </div>
+    <div class="columns is-centered is-vcentered is-variable is-4 mb-4">
+      <div class="column is-6">
+        <figure class="image">
+          <video id="video-demo-1" controls preload="metadata" style="width: 100%; height: auto;">
+            <source id="video-demo-src-1" src="videos/taskBBC News--extend--4-1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+      </div>
+      <div class="column is-6">
+        <figure class="image">
+          <video id="video-demo-2" controls preload="metadata" style="width: 100%; height: auto;">
+            <source id="video-demo-src-2" src="videos/taskGitHub--extend--4-4.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Computer use agents (CUAs) can operate real-world digital interfaces but remain difficult to train due to the high cost of graphical user interface (GUI) interaction and the scarcity of high-quality trajectory data. Existing datasets rely on human demonstrations, limiting scalability. A natural alternative is to synthesize data from strong CUAs, yet their rollouts are highly noisy, with incorrect or suboptimal actions consisting a large proportion of the steps, making naive imitation ineffective. To tackle this challenge, we introduce a <strong>scalable data synthesis pipeline</strong> that transforms noisy rollouts into reliable supervision without human annotation. The core idea is <strong>step-level filtering</strong>, which evaluates actions individually to retain only correct steps, complemented by reasoning augmentation for improved planning. Using this pipeline, we construct <strong>WebSTAR</strong>, a dataset of <strong>13.3K trajectories and 100K graded, reasoning-rich steps</strong> synthesized from OpenAI's computer-use-preview model. We train Qwen-2.5-VL-Instruct models (7B and 32B) on WebSTAR. On WebVoyager, our <strong>7B model surpasses the SoTA open-source CUA model UI-TARS-1.5-7B by more than 15%</strong> with only supervised finetuning. Building on step-level grading, we further create WebSCORE, a dataset of graded step-level actions, and train StepRM, a 7B multimodal process reward model distilled from o4-mini, which matches its grading quality while being far more efficient to deploy at scale. Our results establish <strong>step-level filtering as a key principle for scalable CUA training</strong>, and we introduce two new datasets (WebSTAR, WebSCORE) along with a lightweight process reward model (StepRM) as practical tools to advance robust and efficient CUAs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Data Synthesis Pipeline -->
+<section class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Data Synthesis Pipeline</h2>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <figure class="image">
+          <img src="figs/main.png" alt="Data Synthesis Pipeline" style="width: 100%; height: auto;">
+        </figure>
+      </div>
+    </div>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <p>Overview of our data synthesis pipeline. Our approach consists of three main stages:</p>
+          <ul>
+            <li><strong>(i) Trajectory collection:</strong> We begin by rolling out a teacher CUA in a Chromium environment, executing actions based on user instructions and capturing observations and screenshots.</li>
+            <li><strong>(ii) Thought augmentation &amp; step grading:</strong> For each step, the action and screenshot trajectories are passed through a model to generate an intermediate thought to guide the action. A grading model also receives the same input to evaluate the current step, assigning a score from 0 to 10.</li>
+            <li><strong>(iii) Step-level filtering:</strong> We retain only high-scoring steps to ensure that the agent only learns from high-quality actions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Data Synthesis Pipeline -->
+
+
+<!-- Results Section -->
+<section class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Results</h2>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <div class="columns is-centered is-variable is-4">
+          <div class="column is-6">
+            <figure class="image">
+              <img src="figs/webvoyager_7b.png" alt="WebVoyager Results (7B)" style="width: 80%; height: auto; margin: 0 auto; display: block;">
+            </figure>
+          </div>
+          <div class="column is-6">
+            <figure class="image">
+              <img src="figs/webvoyager_32b.png" alt="WebVoyager Results (32B)" style="width: 80%; height: auto; margin: 0 auto; display: block;">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <p>
+            The results in the WebVoyager figure and Mind2Web table highlight the clear advantages of <strong>step-level filtering for CUA SFT</strong>. In the WebVoyager benchmark, <strong>training on only the correct steps in correct trajectories</strong> consistently yields stronger performance across almost all domains compared to training on all steps within correct trajectories. Under this setting, our <strong>7B step-level model achieves an average success rate of 47.0%</strong>, substantially outperforming the SoTA general-purpose CUA <strong>UI-TARS-1.5-7B (30.0%)</strong> despite using only SFT. This demonstrates that <strong>carefully filtered training data can rival and even surpass</strong> the performance of stronger baselines trained with more complex methods. The full numerical results and statistical significance test are presented in the appendix.
+          </p>
+          <p>
+            These findings demonstrate that <strong>step-level filtering is critical for effective offline training of CUAs</strong>. By removing incorrect or suboptimal intermediate actions while preserving correct steps from successful trajectories, the resulting training data better aligns with the step-level prediction objective. This leads to <strong>significant improvements in downstream performance</strong>, offering a simple yet powerful strategy for advancing the robustness and efficiency of CUA training.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results Section -->
+
+<!-- Further Analysis -->
+<section class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered">Further Analysis</h2>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <div class="columns is-variable is-4 is-vcentered">
+          <div class="column is-6">
+            <figure class="image">
+              <img src="figs/data_scale.png" alt="Scaling behavior of step-level vs. trajectory-level filtering" style="width: 80%; height: auto; margin: 0 auto; display: block;">
+            </figure>
+            <p class="has-text-centered mt-2">
+              Scaling behavior of step-level vs. trajectory-level filtering.
+            </p>
+          </div>
+          <div class="column is-6">
+            <figure class="image">
+              <img src="figs/score_cdf.png" alt="Step-level score distribution from o4-mini" style="width: 100%; height: auto;">
+            </figure>
+            <p class="has-text-centered mt-2">
+              Step-level score distribution from o4-mini.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered mb-4">
+      <div class="column is-10">
+        <div class="content has-text-justified">
+          <p>
+            <strong>Performance with data scaling.</strong> The figure shows the trend of average performance across the three benchmarks with increasing amount of data under different model sizes. The results highlight that <strong>step-level filtering not only improves performance but also scales more effectively</strong> with additional data compared to trajectory-level filtering. In the low-data regime (around 25K examples), <strong>models trained on correct steps already achieve substantially higher success rates</strong> than those trained on full trajectories. As the number of examples increases, the advantage of step-level filtering becomes even more pronounced: <strong>both the 7B and 32B models continue to gain steadily</strong>, while <strong>trajectory-level filtering plateaus early</strong>, particularly for the 7B model.
+          </p>
+          <p>
+            <strong>Score distribution.</strong> The CDF illustrates the cumulative distribution of step-level scores. The distribution is computed only over the successful trajectories, as our final goal is to only retain the correct steps in the successful trajectories. Even within those successful trajectories, <strong>a majority of actions receive low scores</strong>: over half fall below 5. This confirms that trajectory-level filtering, which accepts whole rollouts as long as the final task succeeds, inevitably includes many flawed intermediate steps. Such noisy supervision can mislead agents during training. Step-level filtering directly addresses this issue by isolating the <strong>small fraction of high-quality actions</strong> (scores close to 10) while discarding the majority of low-quality ones. This reinforces our key insight that <strong>filtering at the step granularity is essential</strong> for constructing cleaner and more reliable training data for CUAs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Further Analysis -->
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10 content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>@article{he2025scalable,
+            title={Scalable Data Synthesis for Computer Use Agents with Step-Level Filtering},
+            author={He, Yifei and Chawla, Pranit and Souri, Yaser and Som, Subhojit and Song, Xia},
+            journal={arXiv preprint arXiv:2512.10962},
+            year={2025}
+          }</code></pre>
+        </div>
+      </div>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var files = [
+      "taskBBC News--extend--4-1.mp4",
+      "taskCambridge Dictionary--25-4.mp4",
+      "taskCoursera--25-4.mp4",
+      "taskESPN--22-3.mp4",
+      "taskGitHub--extend--4-4.mp4"
+    ];
+    for (var i = files.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = files[i];
+      files[i] = files[j];
+      files[j] = tmp;
+    }
+    var picks = files.slice(0, 2);
+    var src1 = document.getElementById("video-demo-src-1");
+    var src2 = document.getElementById("video-demo-src-2");
+    var vid1 = document.getElementById("video-demo-1");
+    var vid2 = document.getElementById("video-demo-2");
+    if (src1 && src2 && vid1 && vid2) {
+      src1.src = "videos/" + picks[0];
+      src2.src = "videos/" + picks[1];
+      vid1.load();
+      vid2.load();
+    }
+  })();
+</script>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
